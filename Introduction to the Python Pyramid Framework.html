@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://stackabuse.com/introduction-to-the-python-pyramid-framework/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Introduction to the Python Pyramid Framework_files/osd.js.download"></script><script src="./Introduction to the Python Pyramid Framework_files/org"></script><script type="text/javascript" async="" src="./Introduction to the Python Pyramid Framework_files/videoplayer.js.download"></script>
+    <link href="https://cdn.thisiswaldo.com/" rel="dns-prefetch">
+    <link href="https://fonts.googleapis.com/" rel="dns-prefetch">
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Introduction to the Python Pyramid Framework</title>
+    <meta name="HandheldFriendly" content="True">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fav icons -->
+	<link rel="shortcut icon" href="https://stackabuse.com/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://stackabuse.com/assets/images/apple-touch-icon.png?v=64876b656e">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://stackabuse.com/assets/images/favicon-32x32.png?v=64876b656e">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://stackabuse.com/assets/images/favicon-16x16.png?v=64876b656e">
+    <!-- header scripts -->
+    <script async="" type="text/javascript" src="./Introduction to the Python Pyramid Framework_files/gpt.js.download"></script><script async="" src="./Introduction to the Python Pyramid Framework_files/analytics.js.download"></script><script id="repixel" async="" src="./Introduction to the Python Pyramid Framework_files/r.js.download"></script><script src="./Introduction to the Python Pyramid Framework_files/525232124909042" async=""></script><script async="" src="./Introduction to the Python Pyramid Framework_files/fbevents.js.download"></script><script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var e = document.createElement("script");
+                e.type="text/javascript",
+                e.src="//cdn.thisiswaldo.com/static/js/3873.js",
+                document.getElementsByTagName("head")[0].appendChild(e);
+            }, 1000);
+        }, false);
+    </script>
+	<!-- stylesheets -->
+    <link href="./Introduction to the Python Pyramid Framework_files/css" rel="stylesheet">
+	<link rel="stylesheet" href="./Introduction to the Python Pyramid Framework_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./Introduction to the Python Pyramid Framework_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./Introduction to the Python Pyramid Framework_files/screen.css">
+	<link rel="stylesheet" type="text/css" href="./Introduction to the Python Pyramid Framework_files/atom_one_dark.css">
+	<script>
+/*====================================================
+  THEME SETTINGS & GLOBAL VARIABLES
+====================================================*/
+//  1. Disqus comment settings
+var disqus_shortname = 'stackabuse'; // required: replace example with your forum shortname
+
+//	2. Sidebar Position
+var sidebar_left = false; // Set true or flase for positioning sidebar on left
+
+//  3. Recent Post count
+var recent_post_count = 3;
+
+//	4. Google+ badge settings
+var badge_type = 'page'; // person / page / community ----- three type of google badge
+var google_plus_url = 'https://plus.google.com/111813546240107028721';
+
+//	5. Facebook Page Setting
+var facebook_page_url = 'https://www.facebook.com/stackabuse';
+
+//	6. Twitter Setting
+var twitter_url = 'https://twitter.com/ScottWRobinson';
+var twitter_widget_id = '722928793669607425';
+var number_of_tweet = 3;
+
+//	7. Mailchimp signup form Setting
+var mailchimp_form_url = '//stackabuse.us10.list-manage.com/subscribe/post?u=90b216fdbe02b25619ec94fc3&amp;id=bc2bb312cd';
+var success_message = "Please check your inbox and confirm your email address. Thank you!";
+
+//	8. Flickr Setting
+//var flickr_id = '52617155@N08';
+var flickr_id = '';
+</script>
+    <link rel="shortcut icon" href="https://stackabuse.com/favicon.png" type="image/png">
+    <link rel="canonical" href="https://stackabuse.com/introduction-to-the-python-pyramid-framework/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Stack Abuse">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Introduction to the Python Pyramid Framework">
+    <meta property="og:description" content="Introduction
+In this tutorial, we&#39;re going to learn how to use the Pyramid
+[https://trypyramid.com]  framework in Python. It is an open source web
+development framework which uses the Model-View-Controller
+[https://en.wikipedia.org/wiki/Model–view–controller]  (MVC) architecture
+pattern and is based on Web Server Gateway Interface
+[https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface]  (WSGI). The
+Pyramid framework has a lot of useful add-on packages that make web development
+a lot more co">
+    <meta property="og:url" content="https://stackabuse.com/introduction-to-the-python-pyramid-framework/">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="pyramid">
+    <meta property="article:tag" content="web framework">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Introduction to the Python Pyramid Framework">
+    <meta name="twitter:description" content="Introduction
+In this tutorial, we&#39;re going to learn how to use the Pyramid
+[https://trypyramid.com]  framework in Python. It is an open source web
+development framework which uses the Model-View-Controller
+[https://en.wikipedia.org/wiki/Model–view–controller]  (MVC) architecture
+pattern and is based on Web Server Gateway Interface
+[https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface]  (WSGI). The
+Pyramid framework has a lot of useful add-on packages that make web development
+a lot more co">
+    <meta name="twitter:url" content="https://stackabuse.com/introduction-to-the-python-pyramid-framework/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Muhammad Junaid Khalid">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="python, pyramid, web framework">
+    <meta name="twitter:site" content="@ScottWRobinson">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Stack Abuse",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://stackabuse.com/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Muhammad Junaid Khalid",
+        "url": "https://stackabuse.com/author/muhammad/",
+        "sameAs": []
+    },
+    "headline": "Introduction to the Python Pyramid Framework",
+    "url": "https://stackabuse.com/introduction-to-the-python-pyramid-framework/",
+    "keywords": "python, pyramid, web framework",
+    "description": "Introduction\nIn this tutorial, we&#x27;re going to learn how to use the Pyramid\n[https://trypyramid.com]  framework in Python. It is an open source web\ndevelopment framework which uses the Model-View-Controller\n[https://en.wikipedia.org/wiki/Model–view–controller]  (MVC) architecture\npattern and is based on Web Server Gateway Interface\n[https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface]  (WSGI). The\nPyramid framework has a lot of useful add-on packages that make web development\na lot more co",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://stackabuse.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.23">
+    <link rel="alternate" type="application/rss+xml" title="Stack Abuse" href="https://stackabuse.com/rss/">
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '525232124909042');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=525232124909042&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Repixel Code -->
+<script>
+  (function(w, d, s, id, src){
+  w.Repixel = r = {
+    init: function(id) {
+      w.repixelId = id;
+    }
+  };
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)){ return; }
+  js = d.createElement(s); 
+  js.id = id;
+  js.async = true;
+  js.onload = function(){
+      Repixel.init(w.repixelId);
+  };
+  js.src = src;
+  fjs.parentNode.insertBefore(js, fjs);
+  }(window, document, 'script', 'repixel', 
+  'https://sdk.repixel.co/r.js'));
+  Repixel.init('5cefff7fce3aad00089e44e5');
+</script>
+<!-- Repixel Code -->
+<script src="./Introduction to the Python Pyramid Framework_files/gumroad-overlay-438766895e140b2c5375ae8971fd1b39015250ac4539eefafe8f5023782223df.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><script src="./Introduction to the Python Pyramid Framework_files/count-data.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">a.gumroad-button { background-color: white !important; background-image: url("https://gumroad.com/button/button_bar.jpg") !important; background-repeat: repeat-x !important; border-radius: 4px !important; box-shadow: rgba(0, 0, 0, 0.4) 0 0 2px !important; color: #999 !important; display: inline-block !important; font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 16px !important; font-style: normal !important; font-weight: 500 !important; line-height: 50px !important; padding: 0 15px !important; text-shadow: none !important; text-decoration: none !important; } .gumroad-button-logo { background-image: url("https://gumroad.com/button/button_logo.png") !important; background-size: cover !important; height: 17px !important; width: 16px !important; display: inline-block !important; margin-bottom: -3px !important; margin-right: 15px !important; } .gumroad-loading-indicator { background: white; border-radius: 50%; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: none; height: 60px; left: 50% !important; margin-left: -30px !important; margin-top: -30px !important; padding: 10px; position: fixed; top: 50% !important; width: 60px; z-index: 99997; } .gumroad-loading-indicator i { background: url("https://gumroad.com/js/loading-rainbow.svg"); height: 40px; width: 40px; display: inline-block; background-size: contain; animation: gumroad-spin 1.5s infinite linear; } .gumroad-scroll-container { -webkit-overflow-scrolling: touch; overflow-y: scroll; position: fixed !important; z-index: 99998 !important; top: 0 !important; right: 0 !important; } .gumroad-overlay-iframe { position: absolute; min-width: 100%; min-height: 100%; border: none !important; text-align: left; } @keyframes gumroad-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } } </style><script type="text/javascript" src="./Introduction to the Python Pyramid Framework_files/3873.js.download"></script><style type="text/css">#waldo-sticky-footer-wrapper {position: fixed; width: 100%; bottom: 0px; left: 0px; text-align: center; z-index: 9000;margin-bottom: 0 !important;}#waldo-sticky-footer-wrapper > div {position: relative; display: inline-block; margin-bottom: 0 !important;}#waldo-sticky-footer-wrapper iframe, #waldo-sticky-footer-wrapper div {margin-left: auto;margin-right: auto;}.waldo-sticky-sidebar{position: fixed; top: 10px;z-index: 90}.waldo-bfleft {position: fixed; left: 0; top: 10px;z-index:101;}.waldo-bfright {position: fixed; right: 0; top: 10px;z-index:101;}#nm-ccpa-widget {width: 400px;}#nm-ccpa-widget {position: fixed; right: 20px; z-index: 9999; margin-bottom: 15px;box-shadow: 0 3px 36px 0 rgba(0,0,0,0.3); background-color: #fff;border-radius: 10px;bottom: 20px;margin-top: 10px;font-size: 14px;}.nm-ccpa-widget-header {background: #179f84;color: #fff;padding: 20px;}.nm-ccpa-widget-header .nm-ccpa-widget-main-title {margin-bottom: 0;margin-top: 0;font-size: 16px;font-weight: bold;}.nm-ccpa-widget-body {padding: 20px;background: #fff;}.nm-ccpa-widget-body label {font-size: 16px;}.nm-ccpa-widget-submit-btn {margin-top: 15px;padding-left: 25px;}.nm-ccpa-widget-submit-btn input {background: #179f84;color: #fff;padding: 10px 20px;border-radius: 8px;border: 0;outline: 0;}.nm-ccpa-widget-submit-btn input:hover,.nm-ccpa-widget-submit-btn input:focus {cursor: pointer;}.nm-ccpa-widget-checkbox-label {font-size: 20px;}.nm-ccpa-widget-header {position: relative;}.nm-ccpa-widget-close-btn {position: absolute;right: 10px;top: 10px;}.nm-ccpa-widget-close-btn a {color: #fff;font-size: 20px;text-decoration: none;}.nm-ccpa-widget-message {padding-left: 25px;}#waldo-tag-6038 {clear: both !important;}div[class^="app_gdpr-"] a {color: #41afbb !important; text-decoration: underline !important}#waldo-close-button {position: absolute; right: 0;top: -24px;}#waldo-close-button a {border: 1px solid rgba(0,0,0,.35);padding: 3px;font-size: 12px;color: #fff;font-weight: bold;background-color: #777;}</style><script type="text/javascript">googletag.cmd.push(function() {googletag.pubads().addEventListener('slotRenderEnded', function(event) {waldoPassbackCheck(event);waldoAddCloseBtn(event);});googletag.pubads().enableSingleRequest();googletag.enableServices();gptAdSlots[3874] = googletag.defineSlot('/124067137/stackabuse300x250FL_1', [[300, 250], [300, 600]], 'waldo-tag-3874').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[300, 250], [300, 600]]).addSize([768, 0], [[300, 250], [300, 600]]).addSize([0, 0], [[300, 250], [300, 600]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-3874');gptAdSlots[3878] = googletag.defineSlot('/124067137/stackabuse728x90FS_1', [[728, 90], [320, 50]], 'waldo-tag-3878').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[728, 90]]).addSize([768, 0], [[320, 50]]).addSize([0, 0], [[320, 50]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-3878');gptAdSlots[3880] = googletag.defineSlot('/124067137/stackabuse728x90FS_2', [[728, 90], [300, 250], [320, 50]], 'waldo-tag-3880').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[728, 90], [300, 250]]).addSize([768, 0], [[300, 250], [320, 50]]).addSize([0, 0], [[300, 250], [320, 50]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-3880');gptAdSlots[3884] = googletag.defineSlot('/124067137/stackabuse728x90FS_3', [[728, 90], [300, 250], [320, 50]], 'waldo-tag-3884').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[728, 90], [300, 250]]).addSize([768, 0], [[300, 250], [320, 50]]).addSize([0, 0], [[300, 250], [320, 50]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-3884');gptAdSlots[7184] = googletag.defineSlot('/124067137/stackabuse300x250FL_3', [[300, 250], [300, 600]], 'waldo-tag-7184').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[300, 250], [300, 600]]).addSize([768, 0], [[300, 250], [300, 600]]).addSize([0, 0], [[300, 250], [300, 600]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-7184');gptAdSlots[7611] = googletag.defineSlot('/124067137/stackabuse300x250FL_4', [[300, 250], [300, 600]], 'waldo-tag-7611').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[300, 250], [300, 600]]).addSize([768, 0], [[300, 250], [300, 600]]).addSize([0, 0], [[300, 250], [300, 600]]).build()).addService(googletag.pubads());googletag.display('waldo-tag-7611');});</script><script src="./Introduction to the Python Pyramid Framework_files/pubads_impl_2020082401.js.download" async=""></script><link rel="preload" href="./Introduction to the Python Pyramid Framework_files/f(9).txt" as="script"><script type="text/javascript" src="./Introduction to the Python Pyramid Framework_files/f(9).txt"></script><link rel="preload" href="./Introduction to the Python Pyramid Framework_files/f(10).txt" as="script"><script type="text/javascript" src="./Introduction to the Python Pyramid Framework_files/f(10).txt"></script><link rel="prefetch" href="https://8959813149a5f988c77a18ae200afb0a.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body class="post-template tag-python tag-pyramid tag-web-framework"><div id="MathJax_Message" style="display: none;"></div>
+	<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="https://stackabuse.com/">Stack <span style="color:#f16334;">Abuse</span></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" role="navigation" aria-label="Site navigation">
+	<li class="nav-javascript"><a href="https://stackabuse.com/tag/javascript/">JavaScript</a></li>
+	<li class="nav-python"><a href="https://stackabuse.com/tag/python">Python</a></li>
+	<li class="nav-java"><a href="https://stackabuse.com/tag/java/">Java</a></li>
+    <li class="nav-hireremote">
+        <a rel="noopener nofollow" target="_blank" href="https://hireremote.io/" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Nav-Link">
+            Jobs
+        </a>
+    </li>
+</ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+	<!-- start site's main content area -->
+<section class="content-wrap">
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+			<div class="col-md-8 main-content">
+				<!-- start post -->
+				<article id="5d4ad72f05f16e6a7271edf2" class="post tag-python tag-pyramid tag-web-framework">
+					<div class="post-head">
+						<h2 class="post-title">Introduction to the Python Pyramid Framework</h2>
+						<div class="post-meta">
+							<span class="author">
+                                By
+                                Muhammad Junaid Khalid
+                            </span> •
+							<span class="comment-count"><a href="https://stackabuse.com/introduction-to-the-python-pyramid-framework/#disqus_thread">0 Comments</a></span>
+						</div>
+					</div>
+                    <div class="post-ad">
+                        <!-- 728x90/320x50 -->
+<div id="waldo-tag-3878" data-processed="true" data-google-query-id="CKy495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse728x90FS_1_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container.html" id="google_ads_iframe_/124067137/stackabuse728x90FS_1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>                    </div>
+					<div class="post-content">
+						<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>In this tutorial, we're going to learn how to use the <a rel="nofollow noopener" target="_blank" href="https://trypyramid.com/">Pyramid</a> framework in Python. It is an open source web development framework which uses the <a rel="nofollow noopener" target="_blank" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller</a> (MVC) architecture pattern and is based on <a rel="nofollow noopener" target="_blank" href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">Web Server Gateway Interface</a> (WSGI). The Pyramid framework has a lot of useful add-on packages that make web development a lot more convenient. Some other popular alternatives for web development in Python include <a rel="nofollow noopener" target="_blank" href="https://www.djangoproject.com/">Django</a> and <a rel="nofollow noopener" target="_blank" href="http://flask.pocoo.org/">Flask</a>.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>You need to have basic knowledge of HTML for this tutorial. If you do not have any prior experience with it, do not worry about it, you can still follow this tutorial and understand how Pyramid works, but to develop real world web applications you will have to go back and learn HTML.</p>
+<h3 id="architecture">Architecture</h3>
+<p>Before we move on and see the code, let's first understand WSGI and MVC.</p>
+<p>WSGI is basically a standard which defines the way in which a Python based web application interacts with a server. It governs the process of sending requests to a server, and receiving responses from a server.</p>
+<p>MVC is an architectural pattern which modularizes your application; the model contains the data and business logic of your application, the view displays the relevant information to the user, and the controller is responsible for the interaction between the model and the view.</p>
+<p>Google Maps is a perfect example of the MVC architecture. When we use the route-finding feature in Google Maps, the model contains the code for the algorithm which finds the shortest path from location A to location B, the view is the screen that is shown to you containing the map labeled with the route, and the controller contains the code that uses the shortest path found by the model and displays it to the user through the view. You can also view controller, as the code which receives a request from the view (by the user), forwards it to the model to generate a response, and then displays the response from the model back to the user through a view.</p>
+<p>Besides WSGI and MVC, there are two more terms that you should be familiar with, which are "routes" and "scripts". Routes allow your website to be divided into different webpages, with each webpage performing a different function.</p>
+<p>Let's consider Facebook as an example. If you wish to view your messages, a new webpage with a different view is opened up for that, if you wish to view your own profile, a new webpage is opened for that, but they are all connected to your main website. That's done through routes. Each time you click on a button or link, you are redirected to a new webpage as specified by the routes in our application.</p>
+<p>As for scripts, they simply include configuration settings for our application, and help in managing it.</p>
+<p>We will learn more about all these terms when we create a basic web application using Pyramid. So, let's begin.</p>
+<h3 id="installation">Installation</h3>
+<p>Whenever we develop a web application that is to be deployed online, it is always considered a good practice to make a virtual environment first. The virtual environment contains all the libraries, or frameworks and all the other dependencies that are necessary for running the web app. This way, when you deploy your app to a server, you can simply re-install all those libraries on the server, for your application to run smoothly.</p>
+<p>Let's create a virtual environment before we move forward. Install virtual environment module by running the command below in your terminal:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> pip install virtualenv</span>
+</code></pre>
+<p>To test that your installation was successful, run the following command:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> virtualenv --version</span>
+</code></pre>
+<p>If you see a version number printed to the console then the installation was successful (or <code>virtualenv</code> was already installed on your system).</p>
+<p>To create a virtual environment, first navigate to the folder where you wish to create it, and then run the following command:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> virtualenv myvenv</span>
+</code></pre>
+<p><strong>Note</strong>: You can name your virtual environment anything you want. Here we're using "myenv" for demonstration purposes only.</p><div><!-- 728x90/300x250/320x50 --><div id="waldo-tag-3880" data-processed="true" data-google-query-id="CK2495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse728x90FS_2_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container(1).html" id="google_ads_iframe_/124067137/stackabuse728x90FS_2_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></div>
+<p>The last step is to activate your virtual environment. On Mac, run the following command in the terminal:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">source</span> myvenv/bin/activate</span>
+</code></pre>
+<p>On a Windows machine, you can activate the environment with the following command:</p>
+<pre><code class="hljs">'Installation folder'\myvenv\Scripts\activate.bat
+</code></pre>
+<p>Now that you have your virtual environment set up, let's install Pyramid in it. We will use the pip package manager for that:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> pip install pyramid</span>
+</code></pre>
+<p><strong>Note</strong>: When you are done with working with the application and wish to deactivate your virtual environment, run the following command in the terminal:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> deactivate</span>
+</code></pre>
+<h3 id="codingexercise">Coding Exercise</h3>
+<p>In this section, we will start off by coding a skeleton app to understand how the Pyramid apps are structured and how they communicate at a basic level. After that, we will see how to create applications with multiple views.</p>
+        <!-- start newsletter section -->
+<div class="section">
+    <div class="newsletter text-center">
+        <h4 class="title">Subscribe to our Newsletter</h4>
+        <div class="content">
+            <form action="https://stackabuse.com/introduction-to-the-python-pyramid-framework/#" method="post" class="form-inline validate" novalidate="">
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-1 col-xs-12">
+                        <p>Get occassional tutorials, guides, and jobs in your inbox. No spam ever. Unsubscribe at any time.</p>
+                    </div>
+                    <div class="col-md-2 col-xs-12"></div>
+                </div>
+                <div class="row" style="margin-left: 10px;margin-right: 10px;">
+                    <div class="col-md-7 col-md-offset-1 col-xs-12" style="margin-bottom: 5px;">
+                        <label class="control-label sr-only" for="section-newsletter">Newsletter Signup</label>
+                        <input id="section-newsletter" type="email" value="" name="email" class="form-control input-lg required email" placeholder="Enter your email..." style="width:100%;">
+                    </div>
+                    <div class="col-md-3 col-xs-12" style="margin-top: 5px;">
+                        <button type="submit" name="subscribe" class="btn btn-default btn-lg btn-block btn-subscribe" ga-on="click" ga-event-category="Newsletter" ga-event-action="Signup" ga-event-label="General-Newsletter-Signup">
+                            <i class="fa fa-spinner fa-pulse fa-fw" style="display:none;"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="message"></div>
+        </div>
+    </div>
+</div>
+<!-- end newsletter section -->
+    
+<h4 id="asimpleexampleofpythonpyramid">A Simple Example of Python Pyramid</h4>
+<pre><code class="language-python hljs"><span class="hljs-comment"># intro.py</span>
+<span class="hljs-comment"># Import necessary functions to run our web app</span>
+
+<span class="hljs-keyword">from</span> wsgiref.simple_server <span class="hljs-keyword">import</span> make_server
+<span class="hljs-keyword">from</span> pyramid.config <span class="hljs-keyword">import</span> Configurator
+<span class="hljs-keyword">from</span> pyramid.response <span class="hljs-keyword">import</span> Response
+
+<span class="hljs-comment"># This function receives a request from the user, and returns a response</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">intro</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> Response(<span class="hljs-string">'Hi, My name is Junaid Khalid'</span>)
+
+<span class="hljs-comment"># This function will start a server on our computer (localhost), define the</span>
+<span class="hljs-comment"># routes for our application, and also add a view to be shown to the user</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">with</span> Configurator() <span class="hljs-keyword">as</span> config:
+
+        config.add_route(<span class="hljs-string">'intro'</span>, <span class="hljs-string">'/'</span>)
+        config.add_view(intro, route_name=<span class="hljs-string">'intro'</span>)
+        application = config.make_wsgi_app()
+
+    <span class="hljs-comment"># 8000 is the port number through which the requests of our app will be served</span>
+    server = make_server(<span class="hljs-string">'0.0.0.0'</span>, <span class="hljs-number">8000</span>, application)
+    server.serve_forever()
+
+main()
+</code></pre>
+<p><strong>Note</strong>: The <code>Configurator</code> module is being used to connect a particular view to a specific route. For instance, on Facebook, the "My Profile" view would be different than the "News Feed" view, and they both have different URLs as well. This is exactly what a configurator does; connecting a specific URL/route to a particular view.</p>
+<p>Then <code>make_server</code> methods is used to run our application on a local HTTP server on our machine, with an assigned port number.</p>
+<p>The <code>intro</code> function is used to process the requests received from the user, process them, and return the response to the view. Any processing of the request before sending a response, can be done inside this function.</p>
+<p>To run the above application on your workstation, go to the terminal and run the .py file we just created:</p>
+<pre><code class="language-console hljs"><span class="hljs-meta">$</span><span class="bash"> python3 intro.py</span>
+</code></pre>
+<p>In my case, the filename is intro.py, but yours could be different depending on what you decided to name it.</p>
+<p>Then open any web browser on your PC, and go to this address: <code>http://localhost:8000</code>. You should see a webpage with "Hi, My name is Junaid Khalid" written in a very aesthetically displeasing way. To make it look more pleasant, you can return HTML code as a response as well. For a simple example, let's edit intro function:</p>
+<pre><code class="language-python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">intro</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> Response(<span class="hljs-string">'&lt;h2 style="text-align: center; font-family: verdana; color: blue;"&gt;Hi, My name is Junaid Khalid.&lt;/h2&gt;'</span>)
+</code></pre><div><!-- 728x90/300x250/320x50 --><div id="waldo-tag-3884" data-processed="true" data-google-query-id="CK6495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse728x90FS_3_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container(2).html" id="google_ads_iframe_/124067137/stackabuse728x90FS_3_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="4" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></div>
+<p>Replace the intro function with the one above, and see the output now. A lot better, right? This was just an example. You can make it a lot better.</p>
+<p><strong>Note</strong>: When you make any change in the code, the server is not automatically going to log that. You will have to stop the server, and then restart it to see your changes take effect. To do that, open your terminal where the server is running and press <code>Control+C</code>, this will terminate the server. Then you can restart your server as usual to see the changes.</p>
+<h4 id="separatinganddisplayingmultipleviews">Separating and Displaying Multiple Views</h4>
+<p>In this section, we will add a few more views as well as remove our views from the main file (i.e. 'intro.py' file), and put them all in a new separate file ('all_views.py'). This will modularize our code, make it look cleaner, and will also allow us to add new views more easily. So, let's do it.</p>
+<pre><code class="language-python hljs"><span class="hljs-comment"># all_views.py</span>
+<span class="hljs-comment"># Import necessary functions to run our web app</span>
+<span class="hljs-keyword">from</span> pyramid.compat <span class="hljs-keyword">import</span> escape
+<span class="hljs-keyword">from</span> pyramid.response <span class="hljs-keyword">import</span> Response
+<span class="hljs-keyword">from</span> pyramid.view <span class="hljs-keyword">import</span> view_config
+
+<span class="hljs-comment"># view_config functions tells Pyramid which route's view is going to be defined in the function that follows</span>
+<span class="hljs-comment"># the name of the function does not matter, you can name it whatever you like</span>
+
+<span class="hljs-meta">@view_config(route_name='intro')</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">home_page</span><span class="hljs-params">(request)</span>:</span>
+    header = <span class="hljs-string">'&lt;h2 style="text-align: center;"&gt;Home Page&lt;/h2&gt;'</span>
+    body = <span class="hljs-string">'&lt;br&gt;&lt;br&gt;&lt;p style="text-align: center; font-family: verdana; color: blue;"&gt;Hi, My name is Junaid Khalid.&lt;/p&gt;'</span>
+    body += <span class="hljs-string">'&lt;p style="text-align: center; font-family: verdana;"&gt; This is my portfolio website.&lt;/p&gt;'</span>
+    footer = <span class="hljs-string">'&lt;p style="text-align: center; font-family: verdana;"&gt;Checkout my &lt;a href="/jobs"&gt;previous jobs&lt;/a&gt;.&lt;/p&gt;'</span>
+
+    <span class="hljs-comment"># In the 'a' tag, notice that the href contains '/jobs', this route will be defined in the intro.py file</span>
+    <span class="hljs-comment"># It is simply telling the view to navigate to that route, and run whatever code is in that view</span>
+
+    <span class="hljs-keyword">return</span> Response(header + body + footer)
+
+<span class="hljs-meta">@view_config(route_name='jobs')</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">job_history</span><span class="hljs-params">(request)</span>:</span>
+    header = <span class="hljs-string">'&lt;h2 style="text-align: center;"&gt;Job History&lt;/h2&gt;'</span>
+    job1 = <span class="hljs-string">'&lt;p style="text-align: center; font-family: verdana;"&gt;Jr. Software Developer at XYZ&lt;/p&gt;'</span>
+
+    <span class="hljs-keyword">return</span> Response(header + job1)
+</code></pre>
+<p><strong>Note</strong>: At the beginner level, you can write the HTML code by following the strategy used above i.e. declare tags in different variables and simply concatenate them when sending back the response. At some point you'll likely want to use a templating engine, like <a rel="nofollow noopener" target="_blank" href="https://palletsprojects.com/p/jinja/">Jinja</a> to make HTML generation much simpler.</p>
+<p>Our application won't run just yet, we need to edit the intro.py file as well.</p>
+<pre><code class="language-python hljs"><span class="hljs-comment"># intro.py</span>
+<span class="hljs-comment"># Import necessary functions to run our web app</span>
+
+<span class="hljs-keyword">from</span> wsgiref.simple_server <span class="hljs-keyword">import</span> make_server
+<span class="hljs-keyword">from</span> pyramid.config <span class="hljs-keyword">import</span> Configurator
+<span class="hljs-keyword">from</span> pyramid.response <span class="hljs-keyword">import</span> Response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">with</span> Configurator() <span class="hljs-keyword">as</span> config:
+        <span class="hljs-comment"># In add_route function, the first parameter defines the name of the route</span>
+        <span class="hljs-comment"># and the second parameter defines the 'route' or the page location</span>
+        config.add_route(<span class="hljs-string">'intro'</span>, <span class="hljs-string">'/'</span>)
+        config.add_route(<span class="hljs-string">'jobs'</span>, <span class="hljs-string">'/jobs'</span>)
+
+        <span class="hljs-comment"># The scan function scans our project directory for a file named all_views.py</span>
+        <span class="hljs-comment"># and connects the routes we provided above with their relevant views</span>
+        config.scan(<span class="hljs-string">'all_views'</span>)
+
+        application = config.make_wsgi_app()
+
+    <span class="hljs-comment"># The following lines of code configure and start a server which hosts our</span>
+    <span class="hljs-comment"># website locally (i.e. on our computer)</span>
+    server = make_server(<span class="hljs-string">'0.0.0.0'</span>, <span class="hljs-number">8000</span>, application)
+    server.serve_forever()
+
+main()
+</code></pre>
+<p>As you can see, we have removed the code for our previous view. If we had declared all these views in a single file, the file would have looked a lot more cluttered. Both files look very clean now, and each file now serves a single purpose. Let's see what our web app looks like right now.</p>
+<p><strong>Output:</strong></p>
+<img class="img-responsive" src="./Introduction to the Python Pyramid Framework_files/introduction-python-pyramid-framework-1.png">
+<p>In the image above, we can see our home page. It is located at the route '<a href="http://localhost:8000/">http://localhost:8000</a>'. It does not <em>look</em> very aesthetically pleasing, but as stated at the start of the tutorial, this was not our aim anyways. If we want to make it look aesthetic, we can add a lot of styling to it using HTML style attribute, or CSS, or use templates from Bootstrap.</p>
+<p>Moving on, you can also see a hyperlink which has been named 'previous jobs'. Clicking that would take you to a new webpage with a different route. We will see the output of that in the next image.</p>
+<p><strong>Output:</strong></p>
+<img class="img-responsive" src="./Introduction to the Python Pyramid Framework_files/introduction-python-pyramid-framework-2.png">
+<p>The above image shows our Jobs page. It is located at the route <code>http://localhost:8000/jobs</code>. We specified this route in our 'intro.py' file. I have only added one job to show as an example.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Pyramid is a Python based Web Development Framework to build web apps with ease. In this tutorial, we learned how to install Pyramid inside a virtual environment and make a basic Web Application using Pyramid which runs on a locally created server on our computer.</p>
+<p>If you would like to go into more details, visit Pyramid's <a rel="nofollow noopener" target="_blank" href="https://trypyramid.com/documentation.html">documentation</a> - it is quite elaborate and beginner friendly.</p>
+<!--kg-card-end: markdown-->
+					</div>
+					<footer class="post-footer clearfix">
+						<div class="pull-left tag-list">
+							<i class="fa fa-folder-open-o"></i>
+							<a href="https://stackabuse.com/tag/python/">python</a>,<a href="https://stackabuse.com/tag/pyramid/">pyramid</a>,<a href="https://stackabuse.com/tag/web-framework/">web framework</a>
+						</div>
+						<div class="pull-right share">
+							<div>
+	<ul class="share-icons">
+		<!-- twitter -->
+		<li>
+			<a aria-label="Share on Twitter" href="https://twitter.com/share?text=Introduction%20to%20the%20Python%20Pyramid%20Framework&amp;url=https://stackabuse.com/introduction-to-the-python-pyramid-framework/" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=235&#39;);return false;"><i class="fa fa-twitter" style="color:#55acee;"></i></a>
+		</li>
+		<!-- facebook -->
+		<li>
+			<a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stackabuse.com/introduction-to-the-python-pyramid-framework/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;"><i class="fa fa-facebook" style="color:#3b5998;"></i></a>
+		</li>
+		<!-- linkedin -->
+		<li>
+			<a aria-label="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true%26url=https://stackabuse.com/introduction-to-the-python-pyramid-framework/%26source=https://stackabuse.com" onclick="window.open(this.href, &#39;linkedin-share&#39;, &#39;width=490,height=530&#39;);return false;"><i class="fa fa-linkedin" style="color:#0077b5;"></i></a>
+		</li>
+	</ul>
+</div>
+						</div>
+					</footer>
+                    <!-- start about the author -->
+<div class="about-author clearfix">
+		<a href="https://stackabuse.com/author/muhammad/"><img src="./Introduction to the Python Pyramid Framework_files/default-user-image.jpg" alt="Author image" class="avatar pull-left"></a>
+	<div class="details">
+		<div class="author">
+			About <a href="https://stackabuse.com/author/muhammad/">Muhammad Junaid Khalid</a>
+		</div>
+		<div class="meta-info" style="font-style: normal;">
+		</div>
+	</div>
+</div>
+<!-- end about the author -->
+				</article>
+                <!-- start newsletter section -->
+<div class="section">
+    <div class="newsletter text-center">
+        <h4 class="title">Subscribe to our Newsletter</h4>
+        <div class="content">
+            <form action="https://stackabuse.com/introduction-to-the-python-pyramid-framework/#" method="post" class="form-inline validate" novalidate="">
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-1 col-xs-12">
+                        <p>Get occassional tutorials, guides, and jobs in your inbox. No spam ever. Unsubscribe at any time.</p>
+                    </div>
+                    <div class="col-md-2 col-xs-12"></div>
+                </div>
+                <div class="row" style="margin-left: 10px;margin-right: 10px;">
+                    <div class="col-md-7 col-md-offset-1 col-xs-12" style="margin-bottom: 5px;">
+                        <label class="control-label sr-only" for="section-newsletter">Newsletter Signup</label>
+                        <input id="section-newsletter" type="email" value="" name="email" class="form-control input-lg required email" placeholder="Enter your email..." style="width:100%;">
+                    </div>
+                    <div class="col-md-3 col-xs-12" style="margin-top: 5px;">
+                        <button type="submit" name="subscribe" class="btn btn-default btn-lg btn-block btn-subscribe" ga-on="click" ga-event-category="Newsletter" ga-event-action="Signup" ga-event-label="General-Newsletter-Signup">
+                            <i class="fa fa-spinner fa-pulse fa-fw" style="display:none;"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="message"></div>
+        </div>
+    </div>
+</div>
+<!-- end newsletter section -->
+				<div class="comment-wrap">
+					<!-- start disqus comment -->
+<div class="disqus-container">
+	<div id="disqus_thread"></div>
+	    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<!-- end disqus comment -->
+				</div>
+				<!-- start prev next wrap -->
+<div class="prev-next-wrap clearfix">
+		<a class="btn btn-default pull-left" href="https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/" title="Python for NLP: Multi-label Text Classification with Keras"><i class="fa fa-angle-left fa-fw"></i> Previous Post</a>
+		&nbsp;
+        <a class="btn btn-default pull-right" href="https://stackabuse.com/java-flow-control-if-and-if-else-statements/" title="Java Flow Control: if and if-else Statements">Next Post <i class="fa fa-angle-right fa-fw"></i></a>
+</div>				<!-- end post -->
+			</div>
+			<!-- end main post area -->
+			<!-- start sidebar -->
+<div class="col-md-4 sidebar">
+    <!-- start widget -->
+<div class="widget">
+	<h4 class="title">
+        Ad
+    </h4>
+    <div class="content ad" style="min-height: 250px;">
+        <!-- 300x250/300x600 -->
+<div id="waldo-tag-3874" data-processed="true" data-google-query-id="CKu495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse300x250FL_1_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container(3).html" id="google_ads_iframe_/124067137/stackabuse300x250FL_1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>    </div>
+</div>
+<!-- end widget -->
+    <!-- start widget -->
+<div class="widget">
+    <h4 class="title">Follow Us</h4>
+    <div class="content social">
+        <div class="row">
+            <div class="col-xs-4">
+                <a rel="noopener nofollow" target="_blank" href="https://twitter.com/StackAbuse" style="color: #38A1F3;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-twitter fa-2x"></i>
+                    <i class="hidden-xs fa fa-twitter fa-lg"></i>
+                    <span class="hidden-xs">Twitter</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/stackabuse" style="color: #3b5998;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-facebook fa-2x"></i>
+                    <i class="hidden-xs fa fa-facebook fa-lg"></i>
+                    <span class="hidden-xs">Facebook</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a target="_blank" href="https://stackabuse.com/rss/" style="color: #f7a000;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-rss fa-2x"></i>
+                    <i class="hidden-xs fa fa-rss fa-lg"></i>
+                    <span class="hidden-xs">RSS</span>
+                </a>
+            </div>
+        </div>
+        <!-- <ul class="social">
+            <li><a href="https://twitter.com/StackAbuse"><i class="fa fa-twitter fa-lg"></i></a></li>
+            <li><a href="https://www.facebook.com/stackabuse"><i class="fa fa-facebook fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+            <li><a href="https://github.com/scottwrobinson"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
+            <li><a href="#"><i class="fa fa-stack-exchange"></i></a></li>
+            <li><a href="#"><i class="fa fa-xing"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://stackabuse.com/rss/"><i class="fa fa-rss fa-lg"></i></a></li>
+        </ul> -->
+    </div>
+</div>
+<!-- end widget -->
+    <!-- start widget -->
+<div class="widget">
+    <a rel="noopener nofollow" target="_blank" class="ebook-link" href="https://gum.co/uTxEFw" style="text-decoration: none;" ga-on="click" ga-event-category="Product" ga-event-action="Click" ga-event-label="eBook-Link">
+        <h4 class="title">Data Visualization in Python</h4>
+    </a>
+    <div class="content product">
+        <img class="img-responsive" src="./Introduction to the Python Pyramid Framework_files/data-viz-python-book-transparent.png">
+        <p>
+            Learn the ins and outs of visualizing data in Python with popular libraries like Matplotlib, Seaborn, Bokeh, and more.
+            <strong>Pre-order now for over 30% off!</strong>
+        </p>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- <a rel="noopener nofollow" target="_blank"
+                   class="btn btn-default dcp-link"
+                   href="https://stackabu.se/daily-coding-problem"
+                >
+                    <i class="fa fa-code"></i>
+                    &nbsp;
+                    Pre-order
+                </a> -->
+                <script src="./Introduction to the Python Pyramid Framework_files/gumroad.js.download"></script>
+                <a class="gumroad-button ebook-link" href="https://gum.co/uTxEFw" target="_blank" ga-on="click" ga-event-category="Product" ga-event-action="Click" ga-event-label="eBook-Link"><span class="gumroad-button-logo"></span>Pre-order now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end widget -->
+    <!-- start newsletter widget -->
+<div class="widget">
+    <h4 class="title">Newsletter</h4>
+    <div class="content newsletter">
+        <p style="font-size: 16px;">Subscribe to our newsletter! Get occassional tutorials, guides, and reviews in your inbox.</p>
+        <form action="https://stackabuse.com/introduction-to-the-python-pyramid-framework/#" method="post" class="validate" novalidate="">
+            <div class="input-group">
+                <label class="control-label sr-only" for="widget-newsletter">Newsletter Signup</label>
+                <input id="widget-newsletter" type="email" value="" name="email" class="required email input-lg" placeholder="Enter your email...">
+            </div>
+            <div class="input-group">
+                <button type="submit" name="subscribe" class="btn btn-lg btn-default" ga-on="click" ga-event-category="Newsletter" ga-event-action="Signup" ga-event-label="General-Newsletter-Signup">
+                    <i class="fa fa-spinner fa-pulse fa-fw" style="display:none;"></i>
+                    Subscribe
+                </button>
+            </div>
+            <span style="color: #7f7f7f;">No spam ever. Unsubscribe at any time.</span>
+        </form>
+        <div class="message"></div>
+    </div>
+</div>
+<!-- end tag cloud widget -->
+    <!-- start widget -->
+<div class="widget">
+    <h4 class="title">
+        Ad
+    </h4>
+    <div class="content ad" style="min-height: 250px;">
+        <!-- 300x250/300x600 -->
+<div id="waldo-tag-7184" data-processed="true" data-google-query-id="CK-495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse300x250FL_3_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container(4).html" id="google_ads_iframe_/124067137/stackabuse300x250FL_3_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="5" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+    </div>
+</div>
+<!-- end widget -->
+    <!-- start widget -->
+<div class="widget">
+    <h4 class="title">Want a remote job?</h4>
+    <div class="content jobs hr">
+        <ul style="margin-bottom: 0px;">
+        <li><a aria-label="Senior Backend Engineer" rel="nofollow noopener" target="_blank" href="https://hireremote.io/remote-job/2700-senior-backend-engineer-at-fortressiq" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Job-Link">Senior Backend Engineer<br><span class="job-company">FortressIQ</span>&nbsp;<span class="job-posted-at">1 day ago</span></a><div class="tags"><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-ruby-on-rails-jobs"><span class="job-tag">ruby-on-rails</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-python-jobs"><span class="job-tag">python</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-kubernetes-jobs"><span class="job-tag">kubernetes</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-backend-jobs"><span class="job-tag">backend</span></a></div><hr></li><li><a aria-label="Remote Developer in Payments and Wallet Space" rel="nofollow noopener" target="_blank" href="https://hireremote.io/remote-job/2693-remote-developer-in-payments-and-wallet-space-at-tutuka" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Job-Link">Remote Developer in Payments and Wallet Space<br><span class="job-company">Tutuka</span>&nbsp;<span class="job-posted-at">1 day ago</span></a><div class="tags"><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-coldfusion-jobs"><span class="job-tag">coldfusion</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-java-jobs"><span class="job-tag">java</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-iso8583-jobs"><span class="job-tag">iso8583</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-payment-jobs"><span class="job-tag">payment</span></a></div><hr></li><li><a aria-label="Full-stack Developer" rel="nofollow noopener" target="_blank" href="https://hireremote.io/remote-job/2690-full-stack-developer-at-mezmeriz-inc" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Job-Link">Full-stack Developer<br><span class="job-company">Mezmeriz Inc.</span>&nbsp;<span class="job-posted-at">2 days ago</span></a><div class="tags"><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-python-jobs"><span class="job-tag">python</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-cloud-jobs"><span class="job-tag">cloud</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-frontend-jobs"><span class="job-tag">frontend</span></a><a rel="nofollow noopener" target="_blank" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-Tag-Link" href="https://hireremote.io/remote-backend-jobs"><span class="job-tag">backend</span></a></div></li></ul>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>
+                    <a rel="noopener nofollow" target="_blank" class="btn btn-default" href="https://hireremote.io/" style="margin-top: 10px;" ga-on="click" ga-event-category="Jobs" ga-event-action="Click" ga-event-label="HR-More-Link">
+                        <i class="fa fa-arrow-circle-right"></i>&nbsp; More jobs
+                    </a>
+                </strong>
+            </div>
+            <div class="col-md-8 text-right" style="margin-top: 18px;">
+                Jobs via
+                <a rel="noopener nofollow" target="_blank" href="https://hireremote.io/" class="hr-link" style="color: #f16334;" ga-on="click" ga-event-category="Affiliate" ga-event-action="Click" ga-event-label="HR-Link">
+                    HireRemote.io
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end widget -->
+    <!-- start widget -->
+<div class="widget">
+    <a rel="noopener nofollow" target="_blank" class="dcp-link" href="https://stackabu.se/daily-coding-problem" style="text-decoration: none;" ga-on="click" ga-event-category="Affiliate" ga-event-action="Click" ga-event-label="DCP-Link">
+        <h4 class="title">Prepping for an interview?</h4>
+    </a>
+    <div class="content product">
+        <style type="text/css">
+            #product-features li {
+                margin: 5px 0;
+            }
+        </style>
+        <div id="product-features" style="font-size: 16px;line-height: 1.7em;">
+            <ul style="list-style: initial;">
+                <li>
+                    Improve your skills by solving one coding problem every day
+                </li>
+                <li>
+                    Get the solutions the next morning via email
+                </li>
+                <li>
+                    Practice on <strong>actual problems</strong> asked by top companies, like:
+                    <div style="margin: 15px 0px;">
+                        <img src="./Introduction to the Python Pyramid Framework_files/logo-google.svg" style="height: 16px;">
+                        &nbsp;
+                        <img src="./Introduction to the Python Pyramid Framework_files/logo-facebook.svg" style="height: 13px;margin-bottom: 3px;">
+                        &nbsp;
+                        <img src="./Introduction to the Python Pyramid Framework_files/logo-amazon.svg" style="height: 19px;">
+                        &nbsp;
+                        <img src="./Introduction to the Python Pyramid Framework_files/logo-microsoft.svg" style="height: 18px;">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <a rel="noopener nofollow" target="_blank" class="btn btn-default dcp-link" href="https://stackabu.se/daily-coding-problem" ga-on="click" ga-event-category="Affiliate" ga-event-action="Click" ga-event-label="DCP-Link">
+                    <i class="fa fa-code"></i>
+                    &nbsp;
+                    Daily Coding Problem
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end widget -->
+    <div class="widget-sticky" style="width: 403.325px; position: fixed; top: 10px;">
+        <!-- start widget -->
+<div class="widget">
+    <h4 class="title">
+        Ad
+    </h4>
+    <div class="content ad" style="min-height: 250px;">
+        <!-- 300x250/300x600 -->
+<div id="waldo-tag-7611" data-processed="true" data-google-query-id="CLC495vSvOsCFY3bwAodb-EACQ"><div id="google_ads_iframe_/124067137/stackabuse300x250FL_4_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe frameborder="0" src="./Introduction to the Python Pyramid Framework_files/container(5).html" id="google_ads_iframe_/124067137/stackabuse300x250FL_4_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="6" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+    </div>
+</div>
+<!-- end widget -->
+    </div>
+</div>
+<!-- end sidebar -->
+		</div>
+	</div>
+</section>
+<!-- end site's main content area -->
+
+
+	<!-- start main-footer -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<!-- start first footer widget area -->
+				<div class="col-sm-4">
+					<!-- start widget -->
+<div class="widget">
+    <h4 class="title">Recent Posts</h4>
+    <div class="content recent-post">
+        <div class="recent-single-post">
+            <a href="https://stackabuse.com/java-format-dates-with-datetimeformatter/" class="post-title">Java: Format Dates with DateTimeFormatter</a>
+            <!--<div class="date">August 26, 2020</div>-->
+        </div>
+        <div class="recent-single-post">
+            <a href="https://stackabuse.com/java-format-dates-with-simpledateformat/" class="post-title">Java: Format Dates with SimpleDateFormat</a>
+            <!--<div class="date">August 24, 2020</div>-->
+        </div>
+        <div class="recent-single-post">
+            <a href="https://stackabuse.com/managing-environment-variables-in-java/" class="post-title">Managing Environment Variables in Java</a>
+            <!--<div class="date">August 21, 2020</div>-->
+        </div>
+    </div>
+</div>
+<!-- end widget -->				</div>
+				<!-- end first footer widget area -->
+				<!-- start second footer widget area -->
+				<div class="col-sm-4">
+					<!-- start tag cloud widget -->
+<div class="widget">
+    <h4 class="title">Tags</h4>
+    <div class="content tag-cloud">
+        <a href="https://stackabuse.com/tag/ai/">ai</a><a href="https://stackabuse.com/tag/algorithms/">algorithms</a><a href="https://stackabuse.com/tag/amqp/">amqp</a><a href="https://stackabuse.com/tag/angular/">angular</a><a href="https://stackabuse.com/tag/announcements/">announcements</a><a href="https://stackabuse.com/tag/apache/">apache</a><a href="https://stackabuse.com/tag/apache-commons/">apache commons</a><a href="https://stackabuse.com/tag/api/">api</a><a href="https://stackabuse.com/tag/arduino/">arduino</a><a href="https://stackabuse.com/tag/artificial-intelligence/">artificial intelligence</a>
+    </div>
+</div>
+<!-- end tag cloud widget -->
+				</div>
+				<!-- end second footer widget area -->
+				<!-- start third footer widget area -->
+				<div class="col-sm-4">
+					<!-- start widget -->
+<div class="widget">
+    <h4 class="title">Follow Us</h4>
+    <div class="content social">
+        <div class="row">
+            <div class="col-xs-4">
+                <a rel="noopener nofollow" target="_blank" href="https://twitter.com/StackAbuse" style="color: #38A1F3;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-twitter fa-2x"></i>
+                    <i class="hidden-xs fa fa-twitter fa-lg"></i>
+                    <span class="hidden-xs">Twitter</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/stackabuse" style="color: #3b5998;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-facebook fa-2x"></i>
+                    <i class="hidden-xs fa fa-facebook fa-lg"></i>
+                    <span class="hidden-xs">Facebook</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a target="_blank" href="https://stackabuse.com/rss/" style="color: #f7a000;">
+                    <i class="hidden-lg hidden-md hidden-sm fa fa-rss fa-2x"></i>
+                    <i class="hidden-xs fa fa-rss fa-lg"></i>
+                    <span class="hidden-xs">RSS</span>
+                </a>
+            </div>
+        </div>
+        <!-- <ul class="social">
+            <li><a href="https://twitter.com/StackAbuse"><i class="fa fa-twitter fa-lg"></i></a></li>
+            <li><a href="https://www.facebook.com/stackabuse"><i class="fa fa-facebook fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+            <li><a href="https://github.com/scottwrobinson"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
+            <li><a href="#"><i class="fa fa-stack-exchange"></i></a></li>
+            <li><a href="#"><i class="fa fa-xing"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://stackabuse.com/rss/"><i class="fa fa-rss fa-lg"></i></a></li>
+        </ul> -->
+    </div>
+</div>
+<!-- end widget -->
+				</div>
+				<!-- end third footer widget area -->
+			</div>
+		</div>
+	</footer>
+	<!-- end main-footer -->
+	<!-- start copyright section -->
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				Copyright © 2020, <a href="https://stackabuse.com/">Stack Abuse</a>.  All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end copyright section -->	<div class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="https://stackabuse.com/disclosure">Disclosure</a>
+					•
+					<a href="https://stackabuse.com/privacy-policy">Privacy Policy</a>
+					•
+					<a href="https://stackabuse.com/terms-of-service">Terms of Service</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a aria-label="Back to Top" href="https://stackabuse.com/introduction-to-the-python-pyramid-framework/#" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+	<!--
+<script src="//my.hellobar.com/4dd9990be00532b0fc7961824b7d7a0930e9e2b7.js" type="text/javascript" charset="utf-8" async="async"></script>
+-->
+	<!-- scripts -->
+    <script id="dsq-count-scr" src="./Introduction to the Python Pyramid Framework_files/count.js.download" async=""></script>
+    <script>
+      var disqus_config = function() {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.href;
+        this.callbacks.onReady = [function() {
+          if (window.onDisqusReady) {
+            window.onDisqusReady();
+          }
+        }];
+      };
+      var disqus_script_url = 'https://stackabuse.disqus.com/embed.js';
+    </script>
+
+    <!-- HTML templates for use in JS code -->
+    <script id="newsletter-template" type="text/x-custom-template">
+        <!-- start newsletter section -->
+<div class="section">
+    <div class="newsletter text-center">
+        <h4 class="title">Subscribe to our Newsletter</h4>
+        <div class="content">
+            <form action="#" method="post" class="form-inline validate" novalidate>
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-1 col-xs-12">
+                        <p>Get occassional tutorials, guides, and jobs in your inbox. No spam ever. Unsubscribe at any time.</p>
+                    </div>
+                    <div class="col-md-2 col-xs-12"></div>
+                </div>
+                <div class="row" style="margin-left: 10px;margin-right: 10px;">
+                    <div class="col-md-7 col-md-offset-1 col-xs-12" style="margin-bottom: 5px;">
+                        <label class="control-label sr-only" for="section-newsletter">Newsletter Signup</label>
+                        <input id="section-newsletter" type="email" value="" name="email" class="form-control input-lg required email" placeholder="Enter your email..." style="width:100%;">
+                    </div>
+                    <div class="col-md-3 col-xs-12" style="margin-top: 5px;">
+                        <button type="submit" name="subscribe" class="btn btn-default btn-lg btn-block btn-subscribe"
+                            ga-on="click"
+                            ga-event-category="Newsletter"
+                            ga-event-action="Signup"
+                            ga-event-label="General-Newsletter-Signup"
+                        >
+                            <i class="fa fa-spinner fa-pulse fa-fw" style="display:none;"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="message"></div>
+        </div>
+    </div>
+</div>
+<!-- end newsletter section -->
+    </script>
+
+    <script src="./Introduction to the Python Pyramid Framework_files/jquery.min.js.download" type="text/javascript"></script>
+    <script src="./Introduction to the Python Pyramid Framework_files/highlight.min.js.download"></script>
+    <script src="./Introduction to the Python Pyramid Framework_files/dockerfile.min.js.download"></script>
+    <script src="./Introduction to the Python Pyramid Framework_files/yaml.min.js.download"></script>
+    <script src="./Introduction to the Python Pyramid Framework_files/bootstrap-custom.min.js.download" async=""></script>
+	<script src="./Introduction to the Python Pyramid Framework_files/main.min.js.download" async=""></script>
+    <script src="./Introduction to the Python Pyramid Framework_files/MathJax.js.download" type="text/javascript" async=""></script>
+	<!-- Add your analytic code below -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  if (window.location.hostname !== 'localhost') {
+    ga('create', 'UA-43140675-1', 'auto');
+    ga('require', 'eventTracker');
+
+    ga('set', 'dimension1', 'Muhammad Junaid Khalid');
+    
+    ga('send', 'pageview');
+  }
+
+</script>
+<script async="true" src="./Introduction to the Python Pyramid Framework_files/autotrack.js.download"></script>
+
+
+<div class="gumroad-loading-indicator"><i></i></div><script src="./Introduction to the Python Pyramid Framework_files/code" async=""></script><iframe id="google_osd_static_frame_5335284817859" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Introduction to the Python Pyramid Framework_files/saved_resource.html"></iframe></body><iframe sandbox="allow-scripts allow-same-origin" id="138c8f4d024f9456" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Introduction to the Python Pyramid Framework_files/cs(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="139915e2ff60569d" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Introduction to the Python Pyramid Framework_files/usersync.html">
+    </iframe></html>
